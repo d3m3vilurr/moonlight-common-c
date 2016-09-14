@@ -62,6 +62,7 @@ uint64_t PltGetMillis(void);
 
 #ifdef __vita__
 #include <sys/socket.h>
+#include <netinet/in.h>
 #include <netdb.h>
 #include <unistd.h>
 

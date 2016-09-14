@@ -197,7 +197,7 @@ static int resolveHostName(const char* host)
         Limelog("gethostbyname() failed for host %s\n", host);
         return -1;
     }
-    sockaddr_in tmp = {0};
+    struct sockaddr_in tmp = {0};
     tmp.sin_len = sizeof(tmp);
     tmp.sin_family = SCE_NET_AF_INET;
     memcpy(&tmp.sin_addr, phost->h_addr, phost->h_length);
